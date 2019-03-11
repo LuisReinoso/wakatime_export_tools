@@ -26,7 +26,7 @@ def sum_per_project(days, filter_year=None):
         for project in day["projects"]:
             p = PROJECTS.get(project["name"], {"total_time": 0})
             PROJECTS[project["name"]] = p
-            p["total_time"] += project["total_seconds"]
+            p["total_time"] += project["grand_total"]["total_seconds"]
 
 
 if __name__ == "__main__":
